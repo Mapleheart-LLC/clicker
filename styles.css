@@ -1,0 +1,69 @@
+/* Basic CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Base Styles */
+  body {
+    font-family: 'Major Mono Display', monospace;
+    background-color: #26382d;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  /* Background Effects */
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #57c083, transparent 70%);
+    opacity: 0.1;
+    z-index: -1;
+    animation: pulse 5s infinite;
+  }
+  
+  /* Full-Screen Button Styles */
+  #clicker {
+    width: 95%;
+    height: 92%;
+    color: #fff;
+    background: linear-gradient(135deg, #57c083, #3b8c5e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.3);
+    border-radius: 30px; /* Added rounded corners */
+  }
+  
+  #clicker:hover {
+    background: linear-gradient(135deg, #3b8c5e, #57c083);
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+  }
+  
+  #clicker:active {
+    transform: scale(0.98);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Text Styling Inside Button */
+  #clicker::after {
+    position: relative;
+    z-index: 1;
+  }
+  
